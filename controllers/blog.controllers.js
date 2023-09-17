@@ -87,10 +87,4 @@ ctrl.eliminarPublicacion = async (req, res )=>{
 }
 
 
-
-
-
-
-
-
 module.exports = ctrl

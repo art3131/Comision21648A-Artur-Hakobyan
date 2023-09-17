@@ -10,7 +10,7 @@
     </div>
     <div class="row col-md-5 mx-auto">
 
-        <form action="" id="nueva-publicacion" >
+        <form action="" id="nueva-publicacion" data-id="<%= id  %>">
 
             <div class="mb-3">
                 <input type="text" class="form-control" id="titulo" placeholder="Titulo">
@@ -33,11 +33,11 @@
 
         </form>
 
-
+        <script src="/js/editar.js"></script>
     </div>
 </div>
 
 
-<script src="/js/editar.js"></script>
+
 
 <%-include('partials/footer')  %>

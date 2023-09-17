@@ -35,9 +35,10 @@ formGuardar.addEventListener('submit', async (e) => {
     const url_imagen = document.querySelector('#url_imagen').value;
     const fecha = document.querySelector('#fecha').value;
 
-    // Enviar al servidor
-    const response = await fetch(`/publicacion/${id}`, {
-        method: 'post',
+
+    // Enviar los datos al servidor para crear la nueva publicación
+    const response = await fetch(`/actualizar/${id}`, {
+        method: 'put',
         headers: {
             'Content-Type':'application/json'
         },
@@ -46,6 +47,4 @@ formGuardar.addEventListener('submit', async (e) => {
     const data = await response.json();
 
     alert(data.msg);
-    location.href = "/"
-
-})
+    location.href = "/" })

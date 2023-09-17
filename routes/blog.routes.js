@@ -5,7 +5,7 @@ const  {
     crearPublicacion,
     actualizarPublicacion,
     eliminarPublicacion,
-    updatePost
+    
 } = require('../controllers/blog.controllers');
 
 
@@ -23,14 +23,9 @@ router.get('/admin', (req, res)=>{
     res.render('admin')
 })
 
-router.get('/publicacion/:id', (req, res)=>{
+router.get('/admin/:id', (req, res)=>{
     res.render('edit', {id: req.params.id})
 })
-
-
-
-
-
 
 ///////////////////////////////////////
 // RUTAS PARA DATOS
@@ -44,13 +39,12 @@ router.get('/publicacion/:id',obtenerPublicacion);
 router.post('/publicacion/',crearPublicacion);
 
 //ruta para actualizar una publicacion
-//router.put('/editar/:id',actualizarPublicacion);
+router.put('/actualizar/:id', actualizarPublicacion)
 
 //ruta para eliminar una publicacion
-//router.delete('/publicacion/:id',eliminarPublicacion);
+//router.get('/eliminar/:id', eliminarPublicacion)
 
-router.get('/eliminar/:id', eliminarPublicacion)
+router.get('/eliminar/:id', eliminarPublicacion )
 
-router.get('/publicacion/:id', actualizarPublicacion)
 
 module.exports = router;
