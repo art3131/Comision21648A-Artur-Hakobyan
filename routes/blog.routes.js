@@ -39,7 +39,7 @@ router.get('/publicacion/:id',obtenerPublicacion);
 router.post('/publicacion/',crearPublicacion);
 
 //ruta para actualizar una publicacion
-router.put('/actualizar/:id', actualizarPublicacion)
+router.put('/publicacion/:id', actualizarPublicacion)
 
 //ruta para eliminar una publicacion
 //router.get('/eliminar/:id', eliminarPublicacion)

@@ -13,18 +13,18 @@
         <form action="" id="nueva-publicacion" data-id="<%= id  %>">
 
             <div class="mb-3">
-                <input type="text" class="form-control" id="titulo" placeholder="Titulo">
+                <input type="text" class="form-control" id="titulo" placeholder="Titulo" value="<%= id.titulo %>">
             </div>
             <div class="form-floating mb-3">
-                <textarea class="form-control" placeholder="Leave a comment here" id="detalle"
+                <textarea class="form-control" placeholder="Leave a comment here" id="detalle" <%= id.detalle %>
                     style="height: 100px"></textarea>
                 <label for="detalle">Detalle</label>
             </div>
             <div class="mb-3">
-                <input type="text" class="form-control" id="url_imagen" placeholder="url imagen">
+                <input type="text" class="form-control" id="url_imagen" placeholder="url imagen" <%= id.url_imagen %>>
             </div>
             <div class="mb-3">
-                <input type="date" class="form-control" name="" id="fecha">
+                <input type="date" class="form-control" name="" id="fecha" <%= id.fecha %>>
             </div>
 
             <button type="submit" class="btn btn-primary btn-sm">
