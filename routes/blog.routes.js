@@ -19,13 +19,24 @@ router.get('/', (req, res) =>{
     res.render('index')
 })
 
-router.get('/admin', (req, res)=>{
+
+//Ruta para renderizar pagina de publicacion
+router.get('/admin/publicar', (req, res)=>{
     res.render('admin')
 })
 
-router.get('/admin/:id', (req, res)=>{
+
+// Ruta para renderizar pagina de edicion de publicacion Id
+router.get('/admin/editar/:id', (req, res)=>{
     res.render('edit', {id: req.params.id})
 })
+
+
+//ruta donde renderizar todas las publicaciones
+router.get('/admin/publicaciones', (req, res)=>{
+    return res.render('tabla_publicaciones')
+})
+
 
 ///////////////////////////////////////
 // RUTAS PARA DATOS
@@ -42,9 +53,7 @@ router.post('/publicacion/',crearPublicacion);
 router.put('/publicacion/:id', actualizarPublicacion)
 
 //ruta para eliminar una publicacion
-//router.get('/eliminar/:id', eliminarPublicacion)
-
-router.get('/eliminar/:id', eliminarPublicacion )
+router.get('/publicacion/eliminar/:id', eliminarPublicacion )
 
 
 module.exports = router;

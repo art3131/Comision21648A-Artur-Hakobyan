@@ -1,13 +1,54 @@
 body {
     display: grid;
     grid-template-rows: auto auto 1fr auto;
-    background: lightgrey;
-    height: 100%;
+    background:linear-gradient(rgb(168, 201, 243),rgb(240, 240, 240));
+    min-height: 100vh;
     
 }
+
 #footer {
-    position:fixed ;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    margin-top:auto;
+    background: linear-gradient(to top,black, blue 50%, rgb(240, 240, 240))
 }
+
+#navbar{
+    background: linear-gradient(black  , blue 50%,rgb(168, 201, 243)  );
+}
+
+section{
+margin: 20px 0 50px 10px;
+background-image:linear-gradient(rgb(240, 240, 240),rgb(168, 201, 243));
+border-radius: 20px;
+overflow: auto;
+box-shadow: 10px -5px 5px rgb(93, 93, 93)
+}
+
+
+.tdDetalle{ /* para que el detalle en tablas no ocupe mucho espacio*/
+    max-width:10px;
+    overflow: hidden;
+}
+
+#PDetalle{ /*para que el detalle en admin no se vea en solo una linea */
+    display: inline-block;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: auto;
+  max-width: 30em;
+  max-height:5em;
+  font-family: " sans-serif" ;
+  font-size: 22px;
+  -ms-overflow-style: none;  /* SCROLLBAR OCULTO IE Y Edge */
+  scrollbar-width: none;  /* SCROLLBAR OCULTO Firefox */
+}
+#PDetalle::-webkit-scrollbar{            /* SCROLLBAR OCULTO CHROME BRAVE*/
+    display:none ;
+}
+
+
+
+h1{
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px #000000
+}
+

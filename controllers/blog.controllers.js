@@ -73,7 +73,7 @@ ctrl.eliminarPublicacion = async (req, res )=>{
       const publicacion = await Publicacion.destroy({where:{id}})
       
       
-      return res.redirect('/')
+      return res.redirect('/admin/publicaciones')
          
       }catch (error) {
       console.log(error.message)

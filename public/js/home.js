@@ -6,13 +6,13 @@ const mostrarPublicaciones = (publicaciones, elementoHtml) => {
             <section class="d-flex gap-2">
                 <img src="${publicacion.url_imagen}" class="rounded" height="200" width="200" alt="${publicacion.titulo}" >
                 <div class="d-flex flex-column justify-content-between">
-                    <h4>${publicacion.titulo}</h4>
-                    <p>${publicacion.detalle}</p>
-                    <p>${publicacion.fecha}</p>
-                    <a href="/eliminar/${publicacion.id}" class="btn btn-danger">Eliminar</a>
-                    <a href="/admin/${publicacion.id}" class="btn btn-info btn-sm">Editar</a>
+                    <h4 class="mt-2">${publicacion.titulo}</h4>
+                    <p id="PDetalle">${publicacion.detalle}</p>
+                    <p>Publicado el: ${publicacion.fecha}</p>
+                    
                 </div>
-            </section>
+                
+                </section>
         `
     })
 
